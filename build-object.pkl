@@ -1,0 +1,20 @@
+uuid = "AD51E19A-F724-4809-9085-AB8938D37906"
+name = "SwimInterpreter"
+types { "library" }
+versions {
+    release {
+        major = 0
+        minor = 1
+        patch = 0
+    }
+}
+compile {
+    use = false
+    arguments { }
+}
+tests {
+    primary = ""
+}
+details = ""
+author = "levi"
+update = "https://raw.githubusercontent.com/leviouwendijk/SwimInterpreter/master/build-object.pkl"

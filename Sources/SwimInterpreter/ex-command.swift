@@ -7,6 +7,7 @@ public enum ExCommand:
 {
     case write = "w"
     case quit = "q"
+    case explore = "Ex"
 }
 
 public enum ExCommandLineResult:

@@ -59,6 +59,17 @@ enum SwimExCommandLineSmoke {
         }
 
         commandLine.begin()
+        _ = commandLine.handle(.char("E"))
+        _ = commandLine.handle(.char("x"))
+        guard commandLine.handle(.enter) == .command(.explore) else {
+            throw SwimTestFailure(
+                probe: "ex explore command",
+                expectation: ":Ex resolves to explore",
+                observed: "unexpected result"
+            )
+        }
+
+        commandLine.begin()
         _ = commandLine.handle(
             .char("nope")
         )
