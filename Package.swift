@@ -12,29 +12,16 @@ let package = Package(
             name: "SwimInterpreter",
             targets: ["SwimInterpreter"]
         ),
-        .executable(
-            name: "t_swiminterpreter",
-            targets: ["SwimInterpreterTests"]
-        ),
         // .executable(
         //     name: "swiminttest",
         //     targets: ["SwimInterpreterTestFlows"]
         // ),
     ],
     dependencies: [
-        .package(url: "https://github.com/leviouwendijk/Testing.git", branch: "master"),
     ],
     targets: [
         .target(
             name: "SwimInterpreter"
-        ),
-        .executableTarget(
-            name: "SwimInterpreterTests",
-            dependencies: [
-                "SwimInterpreter",
-                .product(name: "Testing", package: "Testing"),
-            ],
-            path: "Testing/SwimInterpreterTests"
         ),
         // .executableTarget(
         //     name: "SwimInterpreterTestFlows",
